@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4" style="color:rgb(0, 198, 0);">Diabetes Prediction Result</h2>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title" style="color:rgb(0, 187, 255);">Input Values:</h3>
+                <p class="card-text">Pregnancies: {{ pregnancies }}</p>
+                <p class="card-text">Glucose: {{ glucose }}</p>
+                <p class="card-text">Blood Pressure: {{ blood_pressure }}</p>
+                <p class="card-text">Skin Thickness: {{ skin_thickness }}</p>
+                <p class="card-text">Insulin: {{ insulin }}</p>
+                <p class="card-text">BMI: {{ bmi }}</p>
+                <p class="card-text">Diabetes Pedigree Function: {{ diabetes_pedigree }}</p>
+                <p class="card-text">Age: {{ age }}</p>
+            </div>
+        </div>
+        <br>
+        <h5> The person is {{ result }}</h5>
+    </div>
+</body>
+
+</html>
