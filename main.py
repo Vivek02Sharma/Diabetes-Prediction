@@ -18,7 +18,7 @@ models = model_objects['models']
 def main():
     st.markdown("## :blue[Diabetes Prediction App]")
     st.markdown("---")
-    st.markdown('### User Input Features')
+    st.markdown('### :orange[User Input Features]')
     
     pregnancies = st.number_input('**Pregnancies**', min_value = 0,value = 0)
     glucose = st.number_input('**Glucose**', min_value = 0,value = 0)
