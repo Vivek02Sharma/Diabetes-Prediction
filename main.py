@@ -3,6 +3,12 @@ import pickle
 import pandas as pd
 import numpy as np
 
+st.set_page_config(
+    page_title = "Diabetes Prediction App",
+    layout = "wide",
+    theme = {"base": "dark"}
+)
+
 file = open('model_objects.pkl', 'rb')
 model_objects = pickle.load(file)
 
