@@ -1,19 +1,24 @@
-import pickle
+import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from sklearn.impute import SimpleImputer 
+import pickle
+from scipy import stats
+from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier,AdaBoostClassifier,GradientBoostingClassifier
+from xgboost import XGBClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import warnings
 warnings.filterwarnings('ignore')
 
 df = pd.read_csv('diabetes.csv')
+
+# handling outliers
+z_scores = np.abs(stats.zscore(df.select_dtypes(include = [np.number])))
+df = df[(z_scores < 3).all(axis = 1)]
 
 df = df.drop_duplicates()
 
@@ -49,18 +54,11 @@ X_train = preprocessor.fit_transform(X_train)
 X_test = preprocessor.transform(X_test)
 
 models = {
-    'LogisticRegression':LogisticRegression(
-        C=0.1,
-        penalty='l2',
-        solver='lbfgs',
-        max_iter=200),
-
-    'RandomForestClassifier':RandomForestClassifier(
-        n_estimators=200,
-        max_depth=10,
-        min_samples_split=2,
-        min_samples_leaf=1,
-        oob_score=True)
+    'LogisticRegression':LogisticRegression(n_jobs = -1,random_state = 20),
+    'RandomForestClassifier':RandomForestClassifier(oob_score = True,n_jobs = -1,random_state = 20),
+    'AdaBoostClassifier':AdaBoostClassifier(random_state = 20),
+    'GradientBoostingClassifier': GradientBoostingClassifier(random_state = 20),
+    'XGBClassifier':XGBClassifier()
 }
 
 def model_evaluation(X_train,X_test,y_train,y_test,models):

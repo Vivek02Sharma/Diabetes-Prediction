@@ -1,7 +1,6 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import numpy as np
 
 st.set_page_config(
     page_title = "Diabetes Prediction App",
@@ -23,7 +22,7 @@ def main():
     blood_pressure = st.number_input('**Blood Pressure**', min_value = 0,value = 0)
     skin_thickness = st.number_input('**Skin Thickness**', min_value = 0,value = 0)
     insulin = st.number_input('**Insulin**', min_value = 0,value = 0)
-    bmi = st.number_input('**BMI**', min_value = 0.0,value = 0.0)
+    bmi = st.number_input('**BMI**', min_value = 0,value = 0)
     diabetes_pedigree_function = st.number_input('**Diabetes Pedigree Function**', min_value = 0.0,value = 0.0)
     age = st.number_input('**Age**', min_value = 0,value = 0)
     
