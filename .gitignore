@@ -12,6 +12,9 @@ venv/
 
 # Ignore the entire notebook folder
 notebooks/
+.ipynb_checkpoints
+.ipynb 
+.csv
 
 # Distribution / packaging
 .Python
