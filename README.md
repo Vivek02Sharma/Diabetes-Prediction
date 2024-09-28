@@ -111,6 +111,21 @@ Prediction Results:
 - XGBoost Classifier: Not Diabetic
 ```
 
+
+## 📷 Screenshots
+
+### App Interface
+![App Screenshot](https://github.com/user-attachments/assets/0c51e591-b2fd-4e0e-b3f6-ef1d6a695876)
+
+
+### Prediction Results
+![Prediction Results](https://github.com/user-attachments/assets/ea2a0166-2995-40eb-91b7-b0c9962b47e3)
+
+
+### Feature Importance Heatmap
+![Heatmap](https://github.com/user-attachments/assets/69f57a65-92e2-480c-8fc0-566f7ddfb55c)
+
+
 ## 🔍 Dependencies
 
 All required dependencies are listed in the `requirements.txt` file. You can install them using:
@@ -131,7 +146,7 @@ Key dependencies:
 
 ## 📒 Google Colab Notebook
 
-For a more interactive experience, you can also run the Diabetes Prediction models in a Google Colab notebook. [LINK_TO_COLAB_NOTEBOOK](https://colab.research.google.com/drive/10Wz2Ee7FLGLG1rBuJzhvetEcVbqpqf2x?usp=sharing))
+For a more interactive experience, you can also run the Diabetes Prediction models in a Google Colab notebook. [NOTEBOOK LINK](https://colab.research.google.com/drive/10Wz2Ee7FLGLG1rBuJzhvetEcVbqpqf2x?usp=sharing)
 
 This notebook allows you to experiment with the code and datasets without setting up a local environment.
 
