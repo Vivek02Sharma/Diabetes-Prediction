@@ -128,3 +128,10 @@ Key dependencies:
 - `imbalanced-learn`
 - `scipy`
 - `xgboost`
+
+## 📒 Google Colab Notebook
+
+For a more interactive experience, you can also run the Diabetes Prediction models in a Google Colab notebook. [LINK_TO_COLAB_NOTEBOOK](https://colab.research.google.com/drive/10Wz2Ee7FLGLG1rBuJzhvetEcVbqpqf2x?usp=sharing))
+
+This notebook allows you to experiment with the code and datasets without setting up a local environment.
+
