@@ -27,8 +27,8 @@ To run this project locally, you'll need:
 
 1. Create a virtual environment:
     ```bash
-    python -m venv venv
-    ./venv/Scripts/activate
+    python -m venv env
+    ./env/Scripts/activate
     ```
 
 2. Install the required Python packages:
