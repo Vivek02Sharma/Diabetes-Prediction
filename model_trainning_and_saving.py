@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from scipy import stats
+from imblearn.over_sampling import SMOTE
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
@@ -33,6 +34,10 @@ df['Age'] = df['Age'].replace(0,df['Age'].median())
 # divide the dataset into independent and dependent dataset
 X = df.drop(columns='Outcome')
 y = df['Outcome']
+
+# handling imbalance data 
+smote = SMOTE()
+X, y = smote.fit_resample(X, y)
 
 data_columns = X.columns
 
