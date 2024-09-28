@@ -17,7 +17,7 @@ try:
     run_script([sys.executable, 'model_trainning_and_saving.py'])
 
     # Run the second file using Streamlit
-    run_script(['streamlit', 'run', 'streamlit_app.py'])
+    run_script(['streamlit', 'run', 'app.py'])
 
 except KeyboardInterrupt:
     print("\nExecution stopped by user.")
