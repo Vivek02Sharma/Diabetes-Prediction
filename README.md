@@ -56,7 +56,7 @@ This will launch the app in your web browser.
 ### Directory Structure
 
 ```
-Diabetes-Prediction-Project/
+Diabetes-Prediction/
 ├── .devcontainer/
 │   └── devcontainer.json
 ├── .streamlit/
